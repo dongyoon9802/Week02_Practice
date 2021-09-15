@@ -8,24 +8,16 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/btn_1"
+        android:id="@+id/btn_mynum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="홈페이지 열기"/>
+        android:text="학번"
+        android:background="#ff0000"/>
     <Button
-        android:id="@+id/btn_2"
+        android:id="@+id/btn_myname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="전화걸기"/>
-    <Button
-        android:id="@+id/btn_3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="갤러리열기"/>
-    <Button
-        android:id="@+id/btn_4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="끝내기"/>
+        android:text="이름"
+        android:background="#00ff00"/>
 
 </LinearLayout>

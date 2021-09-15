@@ -8,54 +8,29 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn1;
-    Button btn2;
-    Button btn3;
-    Button btn4;
+    Button btn_num;
+    Button btn_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        btn_num = findViewById(R.id.btn_mynum);
+        btn_name = findViewById(R.id.btn_myname);
 
-        btn1 = findViewById(R.id.btn_1);
-        btn2 = findViewById(R.id.btn_2);
-        btn3 = findViewById(R.id.btn_3);
-        btn4 = findViewById(R.id.btn_4);
-
-        btn1.setBackgroundColor(Color.GRAY);
-        btn2.setBackgroundColor(Color.GREEN);
-        btn3.setBackgroundColor(Color.RED);
-        btn4.setBackgroundColor(Color.YELLOW);
-
-        btn1.setOnClickListener(new View.OnClickListener() {
+        btn_num.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://m.nate.com"));
-                startActivity(mIntent);
+                Toast.makeText(getApplicationContext(), "학번 : 201704064", Toast.LENGTH_SHORT).show();
             }
         });
-        btn2.setOnClickListener(new View.OnClickListener() {
+        btn_name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:/911"));
-                startActivity(mIntent);
-            }
-        });
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent mIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("content://media/internal/images/media"));
-                startActivity(mIntent);
-            }
-        });
-        btn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
+                Toast.makeText(getApplicationContext(), "이름 : 유동윤", Toast.LENGTH_SHORT).show();
             }
         });
 
